@@ -6,27 +6,27 @@
 |password|string|null: false|
 
 ### Association
-- has_many :message
-- has_many :group_user
-- has_many :group, through: group_user
+- has_many :messages
+- has_many :groups_users
+- has_many :groups, through: groups_users
 
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false| unique: true|
+|name|string|null: false| unique: true|
 
 ### Association
-- has_many :message
-- has_many :group_user
-- has_many :user, through: group_user
+- has_many :messages
+- has_many :groups_users
+- has_many :users, through: groups_users
 
 
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
-|image|string|null: false|
+|text|string|
+|image|string
 |user_id|string|null: false|foreign_key: true|
 |group_id|string|null: false|foreign_key: true|
 
