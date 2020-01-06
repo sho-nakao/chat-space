@@ -1,0 +1,39 @@
+.main-chat
+  .main-chat__main-header
+    .main-chat__main-header__left-box
+      プログラミング
+      .main-chat__main-header__left-box__inf
+        %ul.main-chat__main-header__left-box__inf__member-name
+          Member:
+          %li.main-chat__main-header__left-box__inf__member-name
+            sho_nakao
+          %li.main-chat__main-header__left-box__inf__member-name
+            SHO_NAKAO
+    %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
+      Edit
+  .main-chat__main-content
+    .main-chat__main-content__message
+      .main-chat__main-content__message__upper-info
+        .main-chat__main-content__message__upper-info__talker
+          sho_nakao
+        .main-chat__main-content__message__upper-info__date
+          2020/01/05(sun)12:13:15
+      .main-chat__main-content__message__text
+        あけましておめでとう
+    .main-chat__main-content__message
+      .main-chat__main-content__message__upper-info
+        .main-chat__main-content__message__upper-info__talker
+          sho_nakao
+        .main-chat__main-content__message__upper-info__date
+          2020/01/05(sun)12:13:15
+      .main-chat__main-content__message__text
+        あけましておめでとう
+  .main-chat__form
+    .main-chat__form__form-box
+      .main-chat__form__form-box__input-box
+        %input{type:"text",class:"main-chat__form__form-box__input-box__text",placeholder:"type a message"}
+        %label{class:"main-chat__form__form-box__input-box__image"}
+          = icon('far','image')
+          %input{type:"file",class:"main-chat__form__form-box__input-box__file"}
+      %input{type:"submit",value:"Send",class:"main-chat__form__form-box__submit-btn"}
+        .main-chat__form__form-box__input-box__image
