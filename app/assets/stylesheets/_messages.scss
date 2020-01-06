@@ -42,8 +42,21 @@
   &__groups{
     height: calc(100vh - 100px);
     padding: 20px 20px 0px;
+    &__group{
+      margin-bottom: 40px;
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: white;
+      }
+      &__message{
+        font-size: 11px;
+        color: white;
+      }
+    }
   }
 }
+
 .fas{
   color: #ffffff;
 }
@@ -52,15 +65,103 @@
   width: calc(100vw - 300px);
   background-color: #ffffff;
   &__main-header{
+    padding: 0px 40px;
+    display: flex;
     height: 100px;
     border-bottom: solid 1px #eeeeee;
+    &__left-box{
+      height: 50px;
+      margin-top: 35px;
+      font-size: 20px;
+      color: #333;
+      &__inf{
+        height: 50px;
+          &__member-name{
+            display: flex;
+            font-size: 12px;
+            color: #999999;
+            margin-left: 0.3rem;
+          }
+      }
+    }
+    &__edit-btn{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      color: #38aef0;
+      cursor: pointer;
+    }
   }  
   &__main-content{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
+    padding: 46px 40px;
+    &__message{
+      padding-bottom: 40px;
+      &__text{
+        font-size: 14px;
+        color: #434a43;;
+      }
+      &__upper-info{
+        display: flex;
+        margin-bottom: 12px;
+
+        &__talker{
+          font-weight: bold;
+          font-size: 16px;
+          color: #333333;
+        }
+        &__date{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+        }
+     }
+    }
   }
   &__form{
     height: 90px;
     background-color: #d2d2d2;
+    padding: 20px 40px;
+    display: flex;
+    &__form-box{
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      display: flex;
+      &__submit-btn{
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
+      }
+      &__input-box{
+        position: relative;
+        width: 100%;
+        &__text{
+          height: 50px;
+          width: 100%;
+        }
+        &__file{
+          display: none;
+        }
+        &__image{
+          position: absolute;
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
