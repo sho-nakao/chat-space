@@ -9,7 +9,8 @@
             sho_nakao
           %li.main-chat__main-header__left-box__inf__member-name
             SHO_NAKAO
-    %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
+    -# %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
+    = link_to "/groups/1/edit", class:"main-chat__main-header__edit-btn" do
       Edit
   .main-chat__main-content
     .main-chat__main-content__message
