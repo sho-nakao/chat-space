@@ -12,32 +12,17 @@
     -# %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
     = link_to "/groups/1/edit", class:"main-chat__main-header__edit-btn" do
       Edit
-  .main-chat__main-content
-    .main-chat__main-content__message
-      .main-chat__main-content__message__upper-info
-        .main-chat__main-content__message__upper-info__talker
-          sho_nakao
-        .main-chat__main-content__message__upper-info__date
-          2020/01/05(sun)12:13:15
-      .main-chat__main-content__message__text
-        あけましておめでとう
-    .main-chat__main-content__message
-      .main-chat__main-content__message__upper-info
-        .main-chat__main-content__message__upper-info__talker
-          sho_nakao
-        .main-chat__main-content__message__upper-info__date
-          2020/01/05(sun)12:13:15
-      .main-chat__main-content__message__text
-        あけましておめでとう
 
+  .messages
+    = render @messages
+ 
   .main-chat__form
     .main-chat__form__form-box
       .main-chat__form__form-box__input-box
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-          .form__mask
-            = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'form__submit'
-        .main-chat__form__form-box__input-box__image
+          .input-box
+            = f.text_field :content, class: 'main-chat__form__form-box__input-box__text', placeholder: 'type a message'
+            = f.label :image, class: 'main-chat__form__form-box__input-box__text__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'main-chat__form__form-box__input-box__file'
+          = f.submit 'Send', class: 'main-chat__form__form-box__submit-btn'
