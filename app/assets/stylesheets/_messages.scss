@@ -16,6 +16,11 @@ a{
   height: 100vh;
   width: 300px;
   background-color: #2f3e51;
+
+  .fas{
+    color: #ffffff;
+  }
+
   float: left;
     &__name{
     height: 100px;
@@ -61,9 +66,7 @@ a{
   }
 }
 
-.fas{
-  color: #ffffff;
-}
+
 
 .main-chat{
   width: calc(100vw - 300px);
@@ -100,27 +103,33 @@ a{
       cursor: pointer;
     }
   }  
-  &__main-content{
+  // &__main-content{
+  //   height: calc(100vh - 190px);
+  //   background-color: #fafafa;
+  //   overflow: scroll;
+  //   padding: 46px 40px;
+
+  .messages{
     height: calc(100vh - 190px);
     background-color: #fafafa;
     overflow: scroll;
     padding: 46px 40px;
-    &__message{
+    .a__main-content__message{
       padding-bottom: 40px;
       &__text{
         font-size: 14px;
         color: #434a43;;
       }
-      &__upper-info{
+      .a__main-content__message__upper-info{
         display: flex;
         margin-bottom: 12px;
 
-        &__talker{
+        .a__main-content__message__upper-info__talker{
           font-weight: bold;
           font-size: 16px;
           color: #333333;
         }
-        &__date{
+        .a__main-content__message__upper-info__date{
           font-size: 12px;
           color: #999999;
           margin-left: 10px;
@@ -128,6 +137,7 @@ a{
      }
     }
   }
+  // }
   &__form{
     height: 90px;
     background-color: #d2d2d2;
@@ -150,20 +160,33 @@ a{
       &__input-box{
         position: relative;
         width: 100%;
-        &__text{
-          height: 50px;
-          width: 100%;
-        }
-        &__file{
-          display: none;
-        }
-        &__image{
-          position: absolute;
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
+
+        .new_message{
+          display: flex;
+
+          .input-box{
+            position: relative;
+            width: 100%;
+
+            .main-chat__form__form-box__input-box__text{
+              height: 50px;
+              width: 100%;
+              padding: 0 40px 0 10px;
+              color: #434a54;
+              border-style: none;
+            }
+          }
+          .main-chat__form__form-box__input-box__text__image{
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+
+            .main-chat__form__form-box__input-box__file{
+              display: none;
+            }
+          }
         }
       }
     }
