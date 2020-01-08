@@ -22,15 +22,16 @@ class GroupsController < ApplicationController
       redirect_to root_path, notice: 'グループを更新しました'
     else
       render :edit
+    end
   end
 
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [] )
   end
-end
 
-def set_group
-  @group = Group.find(params[:id])
-end
+
+  def set_group
+    @group = Group.find(params[:id])
+  end
 end

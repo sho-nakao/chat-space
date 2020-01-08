@@ -1,16 +1,15 @@
 .main-chat
   .main-chat__main-header
     .main-chat__main-header__left-box
-      プログラミング
+      = @group.name
       .main-chat__main-header__left-box__inf
         %ul.main-chat__main-header__left-box__inf__member-name
           Member:
           %li.main-chat__main-header__left-box__inf__member-name
-            sho_nakao
-          %li.main-chat__main-header__left-box__inf__member-name
-            SHO_NAKAO
+            - @group.users.each do |user|
+              = user.name
     -# %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
-    = link_to "/groups/1/edit", class:"main-chat__main-header__edit-btn" do
+    = link_to edit_group_path(@group), class:"main-chat__main-header__edit-btn" do
       Edit
 
   .messages
