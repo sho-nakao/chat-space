@@ -5,8 +5,8 @@
       .main-chat__main-header__left-box__inf
         %ul.main-chat__main-header__left-box__inf__member-name
           Member:
-          %li.main-chat__main-header__left-box__inf__member-name
-            - @group.users.each do |user|
+          - @group.users.each do |user|
+            %li.main-chat__main-header__left-box__inf__member-name
               = user.name
     -# %a{type:"button",class:"main-chat__main-header__edit-btn",link_to:"#"}
     = link_to edit_group_path(@group), class:"main-chat__main-header__edit-btn" do
